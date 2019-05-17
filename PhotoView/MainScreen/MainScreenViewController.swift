@@ -25,12 +25,14 @@ final class MainScreenViewController: UIViewController, MainScreenView {
         let photoListGridModuleView = photoListGridModuleViewFactory?() else { return }
         self.photoListGridModuleView = photoListGridModuleView
         self.view.addSubview(photoListGridModuleView)
-        photoListGridModuleView.snp.makeConstraints {
-           // $0.top.equalTo(searchBar.snp.botton)
-            $0.top.equalTo(self.view?.centerYAnchor as! ConstraintRelatableTarget) //????
-            $0.left.right.bottom.equalToSuperview()
+        photoListGridModuleView.snp.makeConstraints { (photoView) -> Void in
+            //print("addSearchView frame \(view.frame)")
+
+            photoView.top.equalTo(view).offset(view.frame.height / 2)
+                       // print("view height \(view.frame.height)")
+            photoView.left.right.bottom.equalToSuperview()
         }
         view.layoutIfNeeded()
+        print("photoListGridModuleView frame \(photoListGridModuleView.frame)")
         }
 }
-

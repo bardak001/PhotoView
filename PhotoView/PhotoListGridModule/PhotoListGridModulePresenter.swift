@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class PhotoListGridModulePresenterImpl: PhotoListGridModulePresenter {
+final class PhotoListGridModulePresenterImpl: PhotoListGridModulePresenter, PhotoListGridModuleInput {
 
     weak var view: PhotoListGridModuleView?
     var interactor: PhotoListGridModuleInteractor
