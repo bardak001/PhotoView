@@ -28,7 +28,7 @@ final class MainScreenViewController: UIViewController, MainScreenView {
         photoListGridModuleView.snp.makeConstraints { (photoView) -> Void in
             //print("addSearchView frame \(view.frame)")
 
-            photoView.top.equalTo(view).offset(view.frame.height / 2)
+            photoView.top.equalTo(view).offset(view.frame.height)
                        // print("view height \(view.frame.height)")
             photoView.left.right.bottom.equalToSuperview()
         }
